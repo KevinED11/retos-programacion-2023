@@ -9,7 +9,7 @@ import (
 )
 
 // First solution
-type MultiplicationTableWriterFunc func(number int)
+type TableWriterFunc func(number int)
 
 func writeMultiplicationTable(number int) {
 	for n := 1; n <= 10; n++ {
@@ -34,7 +34,7 @@ func readUserInput() (int, error) {
 	return convertUserInputToInt(input)
 }
 
-func execute(writerFunc MultiplicationTableWriterFunc) {
+func execute(writerFunc TableWriterFunc) {
 	input, err := readUserInput()
 	if err != nil {
 		fmt.Println(err)
